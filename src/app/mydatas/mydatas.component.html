@@ -1,0 +1,32 @@
+<header>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownReadFile" ngbDropdownToggle>Select File</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownReadFile">
+          <button class="dropdown-item" (click)="showTable(jsonFile1)">{{jsonFile1}}</button>
+          <button class="dropdown-item" (click)="showTable(jsonFile1)">{{jsonFile2}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container-fluid" id="dataShowSection">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td *ngFor="let data of displayedColumns">
+          {{data}}
+        </td> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of jsonData">
+        <td *ngFor="let key of displayedColumns">
+          {{record[key]}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -11,7 +11,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
     "@angular/core": "~7.0.0",
@@ -20,8 +19,17 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^3.3.1",
+    "bluebird": "^3.5.2",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
     "rxjs": "~6.3.3",
+    "socket.io": "^2.1.1",
+    "tether": "^1.4.5",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

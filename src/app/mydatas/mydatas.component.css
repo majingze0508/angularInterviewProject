@@ -1,0 +1,12 @@
+#dataShowSection {
+  padding-top: 15px;
+}
+#dropdownReadFile:hover{
+  cursor: pointer;
+}
+.dropdown-item:hover{
+  cursor: pointer;
+}
+td {
+  font-size: 0.8em;
+}
