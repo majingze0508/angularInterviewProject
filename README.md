@@ -1,7 +1,7 @@
 # AngularInterviewProject
 If you want to run the project, please follow these steps:
-1. git clone 
-2. cd
+1. git clone https://github.com/majingze0508/angularInterviewProject.git
+2. cd angularInterviewProject
 3. npm install -g @angular/cli
 4. npm install
 5. npm run build
