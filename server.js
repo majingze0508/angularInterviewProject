@@ -8,7 +8,7 @@ const socket = require('socket.io');
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 const server = http.Server(app);
 const io = socket(server);
 
@@ -22,11 +22,9 @@ app.use((req,res,next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, '/dist/angularInterviewProject')));
 
-//app.use('/api', api);
-
-
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, '/dist/angularInterviewProject/index.html')));
 
 const loadFile = (file) => {
   return fs.readFileAsync(file,'utf-8')
@@ -41,12 +39,9 @@ const loadFile = (file) => {
 }
 
 io.on('connection', (socket) => {
-  console.log(__dirname);
-  console.log("Connected to Socket!!"+ socket.id);
   socket.on("openFile", (data) => {
-    return loadFile('./dist/' + data.file)
+    return loadFile('./jsonFiles/' + data.file)
     .then((fileData) => {
-      console.log('fileData: ', fileData);
       socket.emit('jsonData', fileData);
     });
   });

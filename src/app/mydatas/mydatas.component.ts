@@ -14,7 +14,7 @@ export class MydatasComponent implements OnInit {
   jsonData:any[] = [];
   displayedColumns:string[] = [];
 
-  private url = 'http://localhost:3000';
+  private url = 'http://localhost:3002';
   private socket;
   constructor() { }
 
